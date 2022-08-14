@@ -17,9 +17,11 @@ const vm = Vue.createApp({
         increment() {
             this.age++
         },
-        updateLname(event) {
+        updateLname(msg, event) {
+
+            console.log(msg)
             this.lastName = event.target.value
-        }
+        },
     }
 }).mount("#app-1");
 
@@ -28,7 +30,6 @@ const vm = Vue.createApp({
 //     vm.firstName = "Mike";
 //     vm.lastName = "McNillin";
 // }, 2000);
-
 
 
 // Vue.createApp({
