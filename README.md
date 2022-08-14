@@ -1,2 +1,2 @@
-# vuejs
-Modern Web App with Vue
+# Modern Vue 
+Building Modern Web App with Vue
