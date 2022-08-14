@@ -11,6 +11,8 @@
 <body>
 <div class="app-1" id="app-1" v-cloak>
     <p>{{ fullName() }} </p>
+    <p><a :href="url" target="_blank">Udemy.com</a></p>
+    <p v-html="raw_url"></p>
     <hr/>
     <label for="fname">First Name</label>
     <input type="text" id="fname" name="fname" v-model="firstName"/>
@@ -18,7 +20,6 @@
     <label for="lname">Last Name</label>
     <input type="text" id="lname" name="lname" v-model="lastName"/>
 
-    <a v-bind:href="url" target="_blank">Udemy.com</a>
 </div>
 
 

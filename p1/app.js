@@ -5,7 +5,8 @@ const vm = Vue.createApp({
         return {
             firstName: "Thanh",
             lastName: "Nguyen",
-            url: "https://www.udemy.com/course/complete-vue-js-developer-zero-to-mastery-vuex/",
+            url: "https://www.udemy.com/",
+            raw_url: '<a href="https://www.udemy.com/" target="_blank">Udemy.com</a>',
         }
     },
     methods: {
