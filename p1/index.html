@@ -25,8 +25,8 @@
     <input type="text" id="lname" name="lname" :value="lastName"
            @input.prevent="updateLname('Last name event!', $event)" />
 
-    <button type="button" @click="increment">Increment</button>
-    <button type="button" @click="age--">Decrement</button>
+    <button type="button" @click.meta="increment">Increment</button>
+    <button type="button" @click.meta="age--">Decrement</button>
 </div>
 
 
