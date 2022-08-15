@@ -16,14 +16,14 @@
     <p>{{ age }}</p>
     <hr/>
     <label for="fname">First Name</label>
-    <input type="text" id="fname" name="fname" v-model="firstName"/>
+    <input type="text" id="fname" name="fname" v-model="firstName" />
 
     <label for="mname">Middle Name</label>
-    <input type="text" id="mname" name="mname" @keyup="updateMname"/>
+    <input type="text" id="mname" name="mname" @keyup.enter="updateMname" />
 
     <label for="lname">Last Name</label>
     <input type="text" id="lname" name="lname" :value="lastName"
-           @input.prevent="updateLname('Last name event!', $event)"/>
+           @input.prevent="updateLname('Last name event!', $event)" />
 
     <button type="button" @click="increment">Increment</button>
     <button type="button" @click="age--">Decrement</button>
