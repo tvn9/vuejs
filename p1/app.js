@@ -13,24 +13,31 @@ const vm = Vue.createApp({
     },
     methods: {
         updateFname() {
-            this.firstName = event.target.value
+            this.firstName = event.target.value;
         },
         increment() {
-            this.age++
+            this.age++;
         },
         updateLname(msg, event) {
-            console.log(msg)
-            this.lastName = event.target.value
+            console.log(msg);
+            this.lastName = event.target.value;
         },
         updateMname(event) {
-            this.middleName = event.target.value
+            this.middleName = event.target.value;
         },
     },
     computed: {
         fullName() {
             console.log("Full name computed was called!");
-            return `${this.firstName} ${this.middleName} ${this.lastName.toUpperCase()}`
+            return `${this.firstName} ${this.middleName} ${this.lastName.toUpperCase()}`;
         },
+    },
+    watch: {
+        age(newVal, oldVal) {
+            setTimeout(() => {
+                this.age = 20;
+            }, 3000)
+        }
     }
 }).mount("#app-1");
 
