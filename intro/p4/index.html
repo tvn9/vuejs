@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Vue App4</title>
+  </head>
+  <body>
+    <div class="app4" id="app4">
+      <div class="vue-event" id="vue-event">
+        <h2>Vue Events</h2>
+      </div>
+      <div class="event-act" id="event-act">
+        <h3>Events in Action</h3>
+        <span class="hr-line"></span>
+        <div class="btn-group">
+          <button class="btn btn-add" id="btn-add">Add</button>
+          <button class="btn btn-reduce" id="btn-reduce">Reduce</button>
+        </div>
+        <div class="result" id="result">
+          <p>Result: {{ . }}</p>
+        </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="./app4.js"></script>
+  </body>
+</html>

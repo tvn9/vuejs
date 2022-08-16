@@ -67,7 +67,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: left;
-  height: fit-content;
   padding: 10px;
   border: 1px solid #e0dede;
   border-radius: 10px;
