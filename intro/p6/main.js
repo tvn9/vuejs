@@ -6,6 +6,9 @@ const app = Vue.createApp({
       product: "Sock",
       image: "./assets/images/socks_green.jpg",
       vueMastery: "https://vuemastery.com",
+      inStock: true,
+      inventory: 19,
+      colors: ["Red", "Green", "Blue"],
     }
   }
-})
+});

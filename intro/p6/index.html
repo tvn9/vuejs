@@ -21,6 +21,19 @@
           <div class="product-info">
             <h1>{{ product }}</h1>
             <a v-bind:href="vueMastery" target="_blank">Link to Vue Mastery</a>
+            <p v-if="inStock"><span>{{ inventory }} left - </span>In Stock</p>
+            <p v-else="!inStock">
+              <span>{{ inventory }} left - </span>Out of Stock
+            </p>
+            <p v-if="inventory > 10">
+              <span>{{ inventory }} left - </span>In Stock
+            </p>
+            <p v-else-if="inventory <= 10 && inventory > 0">
+              <span>{{ inventory }} left - </span>
+              Almost sold out
+            </p>
+            <p v-else><span>{{ inventory }} left - </span>Out of Stock</p>
+            <span class="color" v-for="color in colors">{{ color }} </span>
           </div>
         </div>
       </div>
