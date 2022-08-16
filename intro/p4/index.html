@@ -9,21 +9,25 @@
   </head>
   <body>
     <div class="app4" id="app4">
-      <div class="vue-event" id="vue-event">
-        <h2>Vue Events</h2>
-      </div>
-      <div class="event-act" id="event-act">
-        <h3>Events in Action</h3>
+      <header class="vue-event" id="vue-event">
+        <h2>Vue Todo</h2>
+      </header>
+      <section class="event-action" id="event-action">
+        <h3>Task List</h3>
         <span class="hr-line"></span>
         <div class="btn-group">
           <button class="btn btn-add" id="btn-add">Add</button>
           <button class="btn btn-reduce" id="btn-reduce">Reduce</button>
         </div>
         <div class="result" id="result">
-          <p>Result: {{ . }}</p>
+          <p>{{ taskList }}</p>
+          <p>
+            Learn more <a v-bind:href="vueLink" target="_blank">about Vue</a>.
+          </p>
         </div>
-      </div>
+      </section>
     </div>
+
     <script src="https://unpkg.com/vue@3"></script>
     <script src="./app4.js"></script>
   </body>
