@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <title>Vue App Demo</title>
+  </head>
+  <body>
+    <div class="app1-container" id="app1">
+      <div class="app1-content">
+        <label for="in-item"><h1>Shopping List</h1></label>
+        <div class="input-fields">
+          <input
+            type="text"
+            class="input-item"
+            id="in-item"
+            v-model="enteredValue"
+          />
+          <button class="btn" id="btn-add" v-on:click="addItem">
+            Add Item
+          </button>
+        </div>
+      </div>
+      <ul class="shop-list" id="list-items">
+        <li v-for="item in shopList">{{ item }}</li>
+      </ul>
+    </div>
+
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
