@@ -2,54 +2,25 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="main.css" />
-    <title>VueJS Course</title>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>A First App</title>
+   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-    <div class="app-1" id="app-1" v-cloak>
-        <div class="user-info">
-            <p>{{ fullName }} </p>
-            <p><a :href="url" target="_blank">Udemy.com</a></p>
-            <p v-html="raw_url"></p>
-            <p>{{ typeof age }}</p>
-        </div>
-
-        <form class="form-group" action="post">
-
-            <label for="fname">First Name</label>
-            <input type="text" id="fname" name="fname" v-model.lazy.trim="firstName" />
-
-            <label for="mname">Middle Name</label>
-            <input type="text" id="mname" name="mname" @keyup.enter="updateMname" />
-
-            <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="lname" :value="lastName" @input.prevent="updateLname('Last name event!', $event)" />
-
-            <label for="age">Age</label><br>
-            <input type="number" id="age" name="age" v-model.number="age" />
-        </form>
-
-        <div class="btn-group">
-            <button type="button" @click="increment">Increment</button>
-            <button type="button" @click="age--">Decrement</button>
-        </div>
-    </div>
-
-
-    <!--<div class="app-2">-->
-    <!--    <h2>Welcome to Vue Component 2</h2>-->
-    <!--    <p>{{ `Job: ${job}` }}</p>-->
-    <!--    <p>{{ `Salary: ${salary}` }}</p>-->
-    <!--</div>-->
-
-
-    <script src="https://unpkg.com/vue@next"></script>
-    <script src="app.js"></script>
-
+   <div id="app">
+      <div>
+         <label for="goal">Goal</label>
+         <input type="text" id="goal" v-model="enteredValue" />
+         <button v-on:click="addGoal">Add Goal</button>
+      </div>
+      <ul>
+         <li v-for="goal in goals">{{ goal }}</li>
+      </ul>
+   </div>
+   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+   <script src="app.js"></script>
 </body>
 
 </html>

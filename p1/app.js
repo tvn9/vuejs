@@ -1,58 +1,32 @@
-"use strict";
+Vue.createApp({
+   data() {
+      return {
+         goals: [],
+         enteredValue: ''
+      };
+   },
+   methods: {
+      addGoal() {
+         if (this.enteredValue) {
+            this.goals.push(this.enteredValue);
+         }
+         this.enteredValue = '';
+      }
+   }
+}).mount('#app');
 
-const vm = Vue.createApp({
-    data() {
-        return {
-            firstName: "Thanh",
-            middleName: "",
-            lastName: "Nguyen",
-            url: "https://www.udemy.com/",
-            raw_url: '<a href="https://www.udemy.com/" target="_blank">Udemy.com</a>',
-            age: 20,
-        }
-    },
-    methods: {
-        updateFname() {
-            this.firstName = event.target.value;
-        },
-        increment() {
-            this.age++;
-        },
-        updateLname(msg, event) {
-            console.log(msg);
-            this.lastName = event.target.value;
-        },
-        updateMname(event) {
-            this.middleName = event.target.value;
-        },
-    },
-    computed: {
-        fullName() {
-            console.log("Full name computed was called!");
-            return `${this.firstName} ${this.middleName} ${this.lastName.toUpperCase()}`;
-        },
-    },
-    watch: {
-        age(newVal, oldVal) {
-            setTimeout(() => {
-                this.age = 20;
-            }, 3000)
-        }
-    }
-}).mount("#app-1");
+// const buttonEl = document.querySelector('button');
+// const inputEl = document.querySelector('input');
+// const listEl = document.querySelector('ul');
 
+// function addGoal() {
+//    const enteredValue = inputEl.value;
+//    if (enteredValue) {
+//       const listItemEl = document.createElement('li');
+//       listItemEl.textContent = enteredValue;
+//       listEl.appendChild(listItemEl);
+//    }
+//    inputEl.value = '';
+// }
 
-// setTimeout(() => {
-//     vm.firstName = "Mike";
-//     vm.lastName = "McNillin";
-// }, 2000);
-
-
-// Vue.createApp({
-//     data() {
-//         return {
-//             job: "Programmer",
-//             salary: "130000",
-//         }
-//     }
-// }).mount(".app-2");
+// buttonEl.addEventListener('click', addGoal);

@@ -1,30 +1,25 @@
-<!DOCTYPE>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-  <title>VueJS Course</title>
-  <link rel="stylesheet" type="text/css" href="main.css" />
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Vue Basics</title>
+   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap" rel="stylesheet" />
+   <link rel="stylesheet" href="styles.css" />
+   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 
 <body>
-  <div id="app-1">
-    <label>
-      <input type="checkbox" v-model="isPurple" /> Purple
-    </label>
-
-    <select name="" v-model="selectedColor">
-      <option value="">White</option>
-      <option value="text-black">Black</option>
-      <option value="text-orange">Orange</option>
-    </select>
-
-    <div class="circle" :class="selectedColor" />
-      Hi!
-    </div>
-  </div>
-
-  <script src="https://unpkg.com/vue@next"></script>
-  <script src="app.js"></script>
+   <header>
+      <h1>Vue Course Goals</h1>
+   </header>
+   <section id="user-goal">
+      <h2>My Course Goal</h2>
+      <p>{{ courseGoal }}</p>
+      <p>Learn more <a v-bind:href="vueLink">About Vue</a>.</p>
+   </section>
+   <script src="./p4.js"></script>
 </body>
 
 </html>
